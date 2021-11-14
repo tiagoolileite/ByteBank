@@ -23,6 +23,12 @@ fun main() {
 
     contaTiago.saca(250.0)
     contaFran.saca(450.0)
+
+    if (contaFran.transfere(100.0, contaTiago)) {
+        println("Novo saldo conta destino: R$${contaTiago.saldo}")
+    } else {
+        println("Transferência não realizada")
+    }
 }
 
 class Conta {
@@ -47,6 +53,20 @@ class Conta {
             println("Não há saldo para saque. Saldo atual: ${this.saldo}")
         }
         println()
+    }
+
+    fun transfere(valor: Double, contaDestino: Conta): Boolean {
+        println("Transferência da conta de ${this.titular} para ${contaDestino.titular}")
+
+        return if (this.saldo >= valor) {
+            this.saldo -= valor
+            contaDestino.saldo += valor
+            println("Novo saldo: R$${this.saldo}")
+            true
+        } else {
+            println("Não há saldo para transferência. Saldo atual: ${this.saldo}")
+            false
+        }
     }
 }
 
