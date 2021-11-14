@@ -16,6 +16,26 @@ fun main() {
     println(contaFran.titular)
     println(contaFran.numero)
     println(contaFran.saldo)
+
+    val numeroX = 10
+    var numeroY = numeroX
+    numeroY++
+
+    println("Numero X $numeroX")
+    println("Numero Y $numeroY")
+
+    val contaJoao = Conta()
+    contaJoao.titular = "João"
+
+    // var contaMaria = contaJoao cópia de referência, alterando em um objeto altera nos dois
+    val contaMaria = Conta()
+    contaMaria.titular = "Maria"
+
+    println("Titular conta João: ${contaJoao.titular}")
+    println("Titular conta Maria: ${contaMaria.titular}")
+
+    /*println(contaJoao) imprime a referência de um objeto
+    println(contaMaria)*/
 }
 
 class Conta {
