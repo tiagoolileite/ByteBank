@@ -50,4 +50,11 @@ fun main() {
         println("Falha na autenticação\n")
     }
 
+    val calculadora = CalculadoraBonificacao()
+
+    calculadora.registra(tiago)
+    calculadora.registra(fran)
+    calculadora.registra(gui)
+
+    println("Total de bonificacao: R$${calculadora.total}")
 }
