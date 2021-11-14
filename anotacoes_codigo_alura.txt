@@ -1,6 +1,6 @@
 É possível adicionar labels na passagem de parametro para construção de um objeto ou usando em outras funções.
 Dessa forma é possível não seguir necessáriamente, a ordem do construtor
-val contaTiago = Conta(titular = "Tiago", conta = 1000)
+val contaTiago = Conta(titular = "Tiago", conta = 1000) - Named Arguments
 
 class Conta(
     private val titular: String,
