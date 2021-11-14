@@ -17,25 +17,14 @@ fun main() {
     println(contaFran.numero)
     println(contaFran.saldo)
 
-    val numeroX = 10
-    var numeroY = numeroX
-    numeroY++
+    deposita(contaTiago, 50.0)
+    deposita(contaFran, 70.0)
+}
 
-    println("Numero X $numeroX")
-    println("Numero Y $numeroY")
-
-    val contaJoao = Conta()
-    contaJoao.titular = "João"
-
-    // var contaMaria = contaJoao cópia de referência, alterando em um objeto altera nos dois
-    val contaMaria = Conta()
-    contaMaria.titular = "Maria"
-
-    println("Titular conta João: ${contaJoao.titular}")
-    println("Titular conta Maria: ${contaMaria.titular}")
-
-    /*println(contaJoao) imprime a referência de um objeto
-    println(contaMaria)*/
+fun deposita(conta: Conta, valor: Double) {
+    println("Depositando na conta de ${conta.titular}")
+    conta.saldo += valor
+    println("Novo saldo: R$${conta.saldo}")
 }
 
 class Conta {
@@ -43,6 +32,28 @@ class Conta {
     var numero = 0
     var saldo = 0.0
 }
+
+//fun testaCopiasEReferencias() {
+//    val numeroX = 10
+//    var numeroY = numeroX
+//    numeroY++
+//
+//    println("Numero X $numeroX")
+//    println("Numero Y $numeroY")
+//
+//    val contaJoao = Conta()
+//    contaJoao.titular = "João"
+//
+//    // var contaMaria = contaJoao cópia de referência, alterando em um objeto altera nos dois
+//    val contaMaria = Conta()
+//    contaMaria.titular = "Maria"
+//
+//    println("Titular conta João: ${contaJoao.titular}")
+//    println("Titular conta Maria: ${contaMaria.titular}")
+//
+//    /*println(contaJoao) imprime a referência de um objeto
+//    println(contaMaria)*/
+//}
 
 // fun testaLacos() {
 //
