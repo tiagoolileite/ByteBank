@@ -2,35 +2,93 @@ fun main() {
     println("Bem vindo ao Bytebank!")
 
     val contaTiago = Conta()
-    contaTiago.titular = "Tiago"
-    contaTiago.numero = 1000
-    contaTiago.saldo = 200.0
-    println(contaTiago.titular)
-    println(contaTiago.numero)
-    println(contaTiago.saldo)
+    contaTiago.setTitular("Tiago")
+    contaTiago.setConta(1000)
+    contaTiago.setSaldo(200.0)
 
     val contaFran = Conta()
-    contaFran.titular = "Fran"
-    contaFran.numero = 1001
-    contaFran.saldo = 300.0
-    println(contaFran.titular)
-    println(contaFran.numero)
-    println(contaFran.saldo)
+    contaFran.setTitular("Fran")
+    contaFran.setConta(1001)
+    contaFran.setSaldo(300.0)
 
-    deposita(contaTiago, 50.0)
-    deposita(contaFran, 70.0)
-}
+    println(contaTiago.toString())
+    println(contaFran.toString())
 
-fun deposita(conta: Conta, valor: Double) {
-    println("Depositando na conta de ${conta.titular}")
-    conta.saldo += valor
-    println("Novo saldo: R$${conta.saldo}")
+    println()
+
+    contaTiago.deposita(50.0)
+    contaFran.deposita(70.0)
+
+    contaTiago.saca(250.0)
+    contaFran.saca(450.0)
+
+    if (contaFran.transfere(100.0, contaTiago)) {
+        println("Novo saldo conta destino: R$${contaTiago.getSaldo()}")
+    } else {
+        println("Transferência não realizada")
+    }
 }
 
 class Conta {
-    var titular = ""
-    var numero = 0
-    var saldo = 0.0
+    private var titular = ""
+    private var numero = 0
+    private var saldo = 0.0
+
+    fun deposita(valor: Double) {
+        println("Depositando na conta de ${this.titular}")
+        this.saldo += valor
+        println("Novo saldo: R$${this.saldo}")
+        println()
+    }
+
+    fun saca(valor: Double) {
+        println("Sacando da conta de ${this.titular}")
+
+        if (this.saldo >= valor) {
+            this.saldo -= valor
+            println("Novo saldo: R$${this.saldo}")
+        } else {
+            println("Não há saldo para saque. Saldo atual: ${this.saldo}")
+        }
+        println()
+    }
+
+    fun transfere(valor: Double, contaDestino: Conta): Boolean {
+        println("Transferência da conta de ${this.titular} para ${contaDestino.titular}")
+
+        return if (this.saldo >= valor) {
+            this.saca(valor)
+            contaDestino.deposita(valor)
+            true
+        } else {
+            false
+        }
+    }
+
+    fun setTitular(titular: String) {
+        this.titular = titular
+    }
+
+    fun setConta(conta: Int) {
+        this.numero = conta
+    }
+
+    fun getSaldo(): Double {
+        return this.saldo
+    }
+
+    fun setSaldo(valor: Double) {
+        if (valor > 0) {
+            this.saldo = valor
+        }
+    }
+
+    override fun toString(): String {
+        var toString = "Titular: ${this.titular}\n"
+        toString += "Conta: ${this.numero}\n"
+        toString += "Saldo: R$${this.saldo}\n"
+        return toString
+    }
 }
 
 //fun testaCopiasEReferencias() {
