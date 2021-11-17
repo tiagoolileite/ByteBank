@@ -1,7 +1,7 @@
 class ContaPoupanca(
     titular: String,
     numero: Int
-) : Conta(
+) : ContaTransferencia(
     titular = titular,
     numero = numero
 ) {
@@ -15,5 +15,4 @@ class ContaPoupanca(
             println("Não há saldo para saque. Saldo atual: ${this.saldo}\n")
         }
     }
-
 }
