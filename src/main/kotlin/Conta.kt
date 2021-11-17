@@ -19,18 +19,6 @@ abstract class Conta(
 
     abstract fun saca(valor: Double)
 
-    fun transfere(valor: Double, contaDestino: Conta): Boolean {
-        println("Transferência da conta de ${this.titular} para ${contaDestino.titular}")
-
-        return if (this.saldo >= valor) {
-            this.saca(valor)
-            contaDestino.deposita(valor)
-            true
-        } else {
-            false
-        }
-    }
-
     override fun toString(): String {
         var toString = "Titular: ${this.titular}\n"
         toString += "Conta: ${this.numero}\n"

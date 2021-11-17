@@ -9,6 +9,6 @@ class Diretor(
     cpf = cpf,
     salario = salario,
     senha = senha
-) {
+), Autenticavel {
     override val bonificacao: Double = salario * 1.3 + plr
 }

@@ -23,5 +23,7 @@ fun testaAutenticacao() {
     val sistema = SistemaInterno()
     sistema.entra(gerente, 1234)
     sistema.entra(diretor, 1000)
-//    sistema.entra(cliente, 5000)
+    sistema.entra(cliente, 5000)
+
+    gerente.autentica(1234)
 }
