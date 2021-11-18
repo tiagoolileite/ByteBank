@@ -1,3 +1,5 @@
+package modelo
+
 abstract class Conta(
     val titular: String,
     private val numero: Int) {
@@ -21,7 +23,7 @@ abstract class Conta(
 
     override fun toString(): String {
         var toString = "Titular: ${this.titular}\n"
-        toString += "Conta: ${this.numero}\n"
+        toString += "modelo.Conta: ${this.numero}\n"
         toString += "Saldo: R$${this.saldo}\n"
         return toString
     }

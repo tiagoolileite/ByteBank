@@ -1,3 +1,5 @@
+package modelo
+
 abstract class ContaTransferencia(
     titular: String,
     numero: Int
