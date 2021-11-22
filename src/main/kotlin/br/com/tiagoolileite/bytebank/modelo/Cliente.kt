@@ -1,4 +1,4 @@
-package modelo
+package br.com.tiagoolileite.bytebank.modelo
 
 class Cliente(
     val nome: String,

@@ -1,4 +1,4 @@
-import modelo.*
+import br.com.tiagoolileite.bytebank.modelo.*
 
 fun testaFuncionarios() {
     val tiago = Analista(

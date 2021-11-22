@@ -1,8 +1,8 @@
 É possível adicionar labels na passagem de parametro para construção de um objeto ou usando em outras funções.
 Dessa forma é possível não seguir necessáriamente, a ordem do construtor
-val contaTiago = modelo.Conta(titular = "Tiago", conta = 1000) - Named Arguments
+val contaTiago = br.com.tiagoolileite.bytebank.modelo.Conta(titular = "Tiago", conta = 1000) - Named Arguments
 
-class modelo.Conta(
+class br.com.tiagoolileite.bytebank.modelo.Conta(
     private val titular: String,
     private val numero: Int = 0) { é possível definir um valor padrão no construtor, para caso não seja informado, o
                                    código adiciona um default
@@ -42,11 +42,11 @@ class modelo.Conta(
 //    println("Numero X $numeroX")
 //    println("Numero Y $numeroY")
 //
-//    val contaJoao = modelo.Conta()
+//    val contaJoao = br.com.tiagoolileite.bytebank.modelo.Conta()
 //    contaJoao.titular = "João"
 //
 //    // var contaMaria = contaJoao cópia de referência, alterando em um objeto altera nos dois
-//    val contaMaria = modelo.Conta()
+//    val contaMaria = br.com.tiagoolileite.bytebank.modelo.Conta()
 //    contaMaria.titular = "Maria"
 //
 //    println("Titular conta João: ${contaJoao.titular}")
@@ -130,7 +130,7 @@ class modelo.Conta(
     /*val palavraJava: java.lang.String = java.lang.String("")*/
     val palavraJava: StringJava = StringJava("") -
 
- -   import modelo.Cliente
+ -   import br.com.tiagoolileite.bytebank.modelo.Cliente
     import novoModelo.Cliente as NovoCliente
 
     val cliente = Cliente("Tiago", "asfad", 123)

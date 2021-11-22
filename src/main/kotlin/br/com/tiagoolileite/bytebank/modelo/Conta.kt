@@ -1,4 +1,4 @@
-package modelo
+package br.com.tiagoolileite.bytebank.modelo
 
 abstract class Conta(
     val titular: String,
@@ -23,7 +23,7 @@ abstract class Conta(
 
     override fun toString(): String {
         var toString = "Titular: ${this.titular}\n"
-        toString += "modelo.Conta: ${this.numero}\n"
+        toString += "br.com.tiagoolileite.bytebank.modelo.Conta: ${this.numero}\n"
         toString += "Saldo: R$${this.saldo}\n"
         return toString
     }

@@ -1,6 +1,6 @@
-import modelo.ContaCorrente
-import modelo.ContaPoupanca
-import modelo.ContaSalario
+import br.com.tiagoolileite.bytebank.modelo.ContaCorrente
+import br.com.tiagoolileite.bytebank.modelo.ContaPoupanca
+import br.com.tiagoolileite.bytebank.modelo.ContaSalario
 
 fun testaComportamentosConta() {
     val contaTiago = ContaCorrente("Tiago", 1000)
