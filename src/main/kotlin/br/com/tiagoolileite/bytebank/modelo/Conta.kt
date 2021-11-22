@@ -1,14 +1,14 @@
 package br.com.tiagoolileite.bytebank.modelo
 
 abstract class Conta(
-    val titular: String,
+    val titular: Cliente,
     private val numero: Int) {
 
     var saldo = 0.0
         protected set
 
     fun deposita(valor: Double) {
-        println("Depositando na conta de ${this.titular}")
+        println("Depositando na conta de ${this.titular.nome}")
 
         if (valor > 0) {
             this.saldo += valor
@@ -21,10 +21,4 @@ abstract class Conta(
 
     abstract fun saca(valor: Double)
 
-    override fun toString(): String {
-        var toString = "Titular: ${this.titular}\n"
-        toString += "Conta: ${this.numero}\n"
-        toString += "Saldo: R$${this.saldo}\n"
-        return toString
-    }
 }

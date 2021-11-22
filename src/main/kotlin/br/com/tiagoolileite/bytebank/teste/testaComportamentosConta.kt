@@ -1,20 +1,28 @@
+import br.com.tiagoolileite.bytebank.modelo.Cliente
 import br.com.tiagoolileite.bytebank.modelo.ContaCorrente
 import br.com.tiagoolileite.bytebank.modelo.ContaPoupanca
 import br.com.tiagoolileite.bytebank.modelo.ContaSalario
 
 fun testaComportamentosConta() {
-    val contaTiago = ContaCorrente("Tiago", 1000)
-    contaTiago.deposita(-200.0)
 
-    val contaFran = ContaPoupanca("Fran", 1001)
+    val tiago = Cliente(nome = "Tiago", cpf = "111", senha = 123)
+
+    val contaTiago = ContaCorrente(titular = tiago, numero = 1000)
+    contaTiago.deposita(200.0)
+
+    val fran = Cliente(nome = "Fran", cpf = "222", senha = 321)
+
+    val contaFran = ContaPoupanca(titular = fran, numero = 1001)
     contaFran.deposita(300.0)
 
-    val contaJota = ContaSalario("Jota", 1003)
+    val jota = Cliente(nome = "Jota", cpf = "333", senha = 323)
+
+    val contaJota = ContaSalario(titular = jota, numero = 1003)
     contaJota.deposita(1000.0)
 
-    println(contaTiago.toString())
-    println(contaFran.toString())
-    println(contaJota.toString())
+    println(contaTiago.titular.toString())
+    println(contaFran.titular.toString())
+    println(contaJota.titular.toString())
 
     contaTiago.deposita(50.0)
     contaFran.deposita(70.0)

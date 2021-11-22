@@ -1,14 +1,14 @@
 package br.com.tiagoolileite.bytebank.modelo
 
 class ContaPoupanca(
-    titular: String,
+    titular: Cliente,
     numero: Int
 ) : ContaTransferencia(
     titular = titular,
     numero = numero
 ) {
     override fun saca(valor: Double) {
-        println("Sacando da conta de ${this.titular}")
+        println("Sacando da conta de ${this.titular.nome}")
 
         if (this.saldo >= valor) {
             this.saldo -= valor
