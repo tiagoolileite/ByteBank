@@ -123,3 +123,16 @@ class modelo.Conta(
 // println("A conta $numeroConta é negativa. Saldo: $saldo")
 // }*/
 // }
+
+ -   import java.lang.String as StringJava
+
+    val palavra: kotlin.String = ""
+    /*val palavraJava: java.lang.String = java.lang.String("")*/
+    val palavraJava: StringJava = StringJava("") -
+
+ -   import modelo.Cliente
+    import novoModelo.Cliente as NovoCliente
+
+    val cliente = Cliente("Tiago", "asfad", 123)
+    /*val novoCliente = novoModelo.Cliente()*/
+    val novoCliente = NovoCliente() -
