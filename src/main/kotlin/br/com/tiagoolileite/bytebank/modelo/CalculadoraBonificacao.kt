@@ -1,3 +1,5 @@
+package br.com.tiagoolileite.bytebank.modelo
+
 class CalculadoraBonificacao {
 
     var total: Double = 0.0

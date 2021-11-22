@@ -1,3 +1,5 @@
+import br.com.tiagoolileite.bytebank.modelo.*
+
 fun testaFuncionarios() {
     val tiago = Analista(
         nome = "Tiago",

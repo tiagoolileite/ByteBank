@@ -1,3 +1,5 @@
+package br.com.tiagoolileite.bytebank.modelo
+
 abstract class ContaTransferencia(
     titular: String,
     numero: Int

@@ -1,3 +1,6 @@
+import br.com.tiagoolileite.bytebank.modelo.ContaCorrente
+import br.com.tiagoolileite.bytebank.modelo.ContaPoupanca
+
 fun testaContasDiferentes() {
     val contaCorrente = ContaCorrente(
         titular = "Tiago Leite",

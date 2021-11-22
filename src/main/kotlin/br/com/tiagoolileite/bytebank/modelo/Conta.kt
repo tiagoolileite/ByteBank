@@ -1,3 +1,5 @@
+package br.com.tiagoolileite.bytebank.modelo
+
 abstract class Conta(
     val titular: String,
     private val numero: Int) {

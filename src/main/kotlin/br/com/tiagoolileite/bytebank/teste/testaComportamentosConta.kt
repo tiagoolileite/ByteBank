@@ -1,3 +1,7 @@
+import br.com.tiagoolileite.bytebank.modelo.ContaCorrente
+import br.com.tiagoolileite.bytebank.modelo.ContaPoupanca
+import br.com.tiagoolileite.bytebank.modelo.ContaSalario
+
 fun testaComportamentosConta() {
     val contaTiago = ContaCorrente("Tiago", 1000)
     contaTiago.deposita(-200.0)

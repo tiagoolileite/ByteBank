@@ -1,4 +1,6 @@
-class ContaCorrente(
+package br.com.tiagoolileite.bytebank.modelo
+
+class ContaPoupanca(
     titular: String,
     numero: Int
 ) : ContaTransferencia(
@@ -7,10 +9,9 @@ class ContaCorrente(
 ) {
     override fun saca(valor: Double) {
         println("Sacando da conta de ${this.titular}")
-        val valorComTaxa = valor + 0.1
 
-        if (this.saldo >= valorComTaxa) {
-            this.saldo -= valorComTaxa
+        if (this.saldo >= valor) {
+            this.saldo -= valor
             println("Novo saldo: R$${this.saldo}\n")
         } else {
             println("Não há saldo para saque. Saldo atual: ${this.saldo}\n")

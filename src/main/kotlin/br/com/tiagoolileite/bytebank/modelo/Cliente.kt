@@ -1,3 +1,5 @@
+package br.com.tiagoolileite.bytebank.modelo
+
 class Cliente(
     val nome: String,
     val cpf: String,

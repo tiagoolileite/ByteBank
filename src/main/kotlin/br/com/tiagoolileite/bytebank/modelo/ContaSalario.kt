@@ -1,7 +1,9 @@
-class ContaPoupanca(
+package br.com.tiagoolileite.bytebank.modelo
+
+class ContaSalario(
     titular: String,
     numero: Int
-) : ContaTransferencia(
+) : Conta(
     titular = titular,
     numero = numero
 ) {
@@ -15,4 +17,5 @@ class ContaPoupanca(
             println("Não há saldo para saque. Saldo atual: ${this.saldo}\n")
         }
     }
+
 }

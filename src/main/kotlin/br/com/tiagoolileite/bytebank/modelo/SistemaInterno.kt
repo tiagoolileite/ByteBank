@@ -1,3 +1,5 @@
+package br.com.tiagoolileite.bytebank.modelo
+
 class SistemaInterno {
 
     fun entra(admin: Autenticavel, senha: Int) {
