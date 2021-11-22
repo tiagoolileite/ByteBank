@@ -23,7 +23,7 @@ abstract class Conta(
 
     override fun toString(): String {
         var toString = "Titular: ${this.titular}\n"
-        toString += "br.com.tiagoolileite.bytebank.modelo.Conta: ${this.numero}\n"
+        toString += "Conta: ${this.numero}\n"
         toString += "Saldo: R$${this.saldo}\n"
         return toString
     }
