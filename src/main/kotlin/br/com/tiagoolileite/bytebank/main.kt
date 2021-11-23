@@ -1,5 +1,7 @@
 package br.com.tiagoolileite.bytebank
 
-fun main() {
+import testaContasDiferentes
 
+fun main() {
+    testaContasDiferentes()
 }

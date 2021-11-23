@@ -1,14 +1,14 @@
 package br.com.tiagoolileite.bytebank.modelo
 
 class ContaCorrente(
-    titular: String,
+    titular: Cliente,
     numero: Int
 ) : ContaTransferencia(
     titular = titular,
     numero = numero
 ) {
     override fun saca(valor: Double) {
-        println("Sacando da conta de ${this.titular}")
+        println("Sacando da conta de ${this.titular.nome}")
         val valorComTaxa = valor + 0.1
 
         if (this.saldo >= valorComTaxa) {
