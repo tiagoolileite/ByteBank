@@ -1,4 +1,6 @@
-package br.com.tiagoolileite.bytebank.modelo
+package br.com.tiagoolileite.bytebank.modelo.conta
+
+import br.com.tiagoolileite.bytebank.modelo.Cliente.Cliente
 
 abstract class Conta(
     val titular: Cliente,

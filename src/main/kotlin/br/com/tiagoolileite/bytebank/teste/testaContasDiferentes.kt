@@ -1,7 +1,7 @@
-import br.com.tiagoolileite.bytebank.modelo.Cliente
-import br.com.tiagoolileite.bytebank.modelo.ContaCorrente
-import br.com.tiagoolileite.bytebank.modelo.ContaPoupanca
-import br.com.tiagoolileite.bytebank.modelo.Endereco
+import br.com.tiagoolileite.bytebank.modelo.Cliente.Cliente
+import br.com.tiagoolileite.bytebank.modelo.conta.ContaCorrente
+import br.com.tiagoolileite.bytebank.modelo.conta.ContaPoupanca
+import br.com.tiagoolileite.bytebank.modelo.Cliente.Endereco
 
 fun testaContasDiferentes() {
     val contaCorrente = ContaCorrente(

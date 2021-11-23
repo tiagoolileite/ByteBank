@@ -1,4 +1,6 @@
-package br.com.tiagoolileite.bytebank.modelo
+package br.com.tiagoolileite.bytebank.modelo.utils
+
+import br.com.tiagoolileite.bytebank.modelo.interfaces.Autenticavel
 
 class SistemaInterno {
 

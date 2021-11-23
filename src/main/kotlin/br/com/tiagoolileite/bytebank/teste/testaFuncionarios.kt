@@ -1,7 +1,7 @@
-import br.com.tiagoolileite.bytebank.modelo.Analista
-import br.com.tiagoolileite.bytebank.modelo.CalculadoraBonificacao
-import br.com.tiagoolileite.bytebank.modelo.Diretor
-import br.com.tiagoolileite.bytebank.modelo.Gerente
+import br.com.tiagoolileite.bytebank.modelo.funcionario.Analista
+import br.com.tiagoolileite.bytebank.modelo.utils.CalculadoraBonificacao
+import br.com.tiagoolileite.bytebank.modelo.funcionario.Diretor
+import br.com.tiagoolileite.bytebank.modelo.funcionario.Gerente
 
 fun testaFuncionarios() {
     val tiago = Analista(

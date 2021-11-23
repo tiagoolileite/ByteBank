@@ -1,4 +1,4 @@
-package br.com.tiagoolileite.bytebank.modelo
+package br.com.tiagoolileite.bytebank.modelo.funcionario
 
 abstract class Funcionario(
     val nome: String,

@@ -1,4 +1,6 @@
-package br.com.tiagoolileite.bytebank.modelo
+package br.com.tiagoolileite.bytebank.modelo.funcionario
+
+import br.com.tiagoolileite.bytebank.modelo.interfaces.Autenticavel
 
 class Gerente(
     nome: String,

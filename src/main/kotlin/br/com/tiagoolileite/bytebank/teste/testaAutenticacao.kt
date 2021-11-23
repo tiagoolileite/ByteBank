@@ -1,7 +1,7 @@
-import br.com.tiagoolileite.bytebank.modelo.Cliente
-import br.com.tiagoolileite.bytebank.modelo.Diretor
-import br.com.tiagoolileite.bytebank.modelo.Gerente
-import br.com.tiagoolileite.bytebank.modelo.SistemaInterno
+import br.com.tiagoolileite.bytebank.modelo.Cliente.Cliente
+import br.com.tiagoolileite.bytebank.modelo.funcionario.Diretor
+import br.com.tiagoolileite.bytebank.modelo.funcionario.Gerente
+import br.com.tiagoolileite.bytebank.modelo.utils.SistemaInterno
 
 fun testaAutenticacao() {
     val gerente = Gerente(
