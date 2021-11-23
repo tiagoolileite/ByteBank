@@ -1,4 +1,4 @@
-package br.com.tiagoolileite.bytebank.modelo.Cliente
+package br.com.tiagoolileite.bytebank.modelo.cliente
 
 class Endereco(
     var logradouro: String = "",

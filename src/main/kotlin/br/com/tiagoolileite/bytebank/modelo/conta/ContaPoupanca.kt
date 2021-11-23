@@ -1,6 +1,6 @@
 package br.com.tiagoolileite.bytebank.modelo.conta
 
-import br.com.tiagoolileite.bytebank.modelo.Cliente.Cliente
+import br.com.tiagoolileite.bytebank.modelo.cliente.Cliente
 
 class ContaPoupanca(
     titular: Cliente,

@@ -1,4 +1,4 @@
-package br.com.tiagoolileite.bytebank.modelo.Cliente
+package br.com.tiagoolileite.bytebank.modelo.cliente
 
 import br.com.tiagoolileite.bytebank.modelo.interfaces.Autenticavel
 

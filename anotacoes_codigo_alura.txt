@@ -136,3 +136,6 @@ class Conta(
     val cliente = Cliente("Tiago", "asfad", 123)
     /*val novoCliente = novoModelo.Cliente()*/
     val novoCliente = NovoCliente() -
+
+//totalContas++ com set privado na property global não é´possivel alterar em outros lugares do código
+

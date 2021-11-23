@@ -1,4 +1,4 @@
-import br.com.tiagoolileite.bytebank.modelo.Cliente.Cliente
+import br.com.tiagoolileite.bytebank.modelo.cliente.Cliente
 import br.com.tiagoolileite.bytebank.modelo.conta.ContaCorrente
 import br.com.tiagoolileite.bytebank.modelo.conta.ContaPoupanca
 

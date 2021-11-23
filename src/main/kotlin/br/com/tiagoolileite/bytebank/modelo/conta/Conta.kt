@@ -1,6 +1,9 @@
 package br.com.tiagoolileite.bytebank.modelo.conta
 
-import br.com.tiagoolileite.bytebank.modelo.Cliente.Cliente
+import br.com.tiagoolileite.bytebank.modelo.cliente.Cliente
+
+var totalContas = 0
+    private set
 
 abstract class Conta(
     val titular: Cliente,
@@ -8,6 +11,13 @@ abstract class Conta(
 
     var saldo = 0.0
         protected set
+
+    var total = 0
+
+    init {
+        println("Criando Conta")
+        totalContas++
+    }
 
     fun deposita(valor: Double) {
         println("Depositando na conta de ${this.titular.nome}")
